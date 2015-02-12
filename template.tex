@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt, oneside]{article}
+% remplacer "oneside" par "twoside" si on veut imprimer en recto-verso
+
+\usepackage[utf8]{inputenc} % Encodage utf-8
+\usepackage[T1]{fontenc} % Nouvelle norme pour codage des caractères
+\usepackage{aeguill}
+
+\usepackage[frenchb]{babel} % Règles typographiques françaises, césures
+\usepackage{graphicx} % Insertion images
+\usepackage{epstopdf} % Converit les images .eps en .pdf pour la compilation avec pdflatex
+
+% package pour tous ce qui est math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% définition de toutes les constantes
+\newcommand{\RapportTitre}{Template LaTex}      % Titre
+
+\newcommand{\RapportAuteur}{XXX XXXX} % Auteur 
+
+\newcommand{\RapportDepartement}{XXX}          % Departement
+\newcommand{\RapportCours}{XXX}                % le cours
+
+\newcommand{\RapportProfesseur}{XXXXX}   % professeur
+\newcommand{\RapportAssistant}{XXXXX}    % assistant
+
+\newcommand{\RapportClasse}{XXXXX}  % la classe
+\newcommand{\RapportSalle}{XXX}          % la salle
+
+\newcommand{\RapportDate}{\today}   % la date
+\newcommand{\RapportLieu}{XXXXXXX}
+
+% importe les paramètres pour la condifuration du pdf de sortie
+\input{configuration/param_pdf.tex}
+% importe tous les paramètres pour afficher du code source
+\input{configuration/param_code_source.tex}
+\begin{document}
+
+\input{configuration/param_numerotation.tex}
+
+\input{chapitre/premiere_page.tex}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{chapitre/introduction.tex}
+
+\input{chapitre/labo.tex}
+
+\newpage
+
+\input{chapitre/conclusion.tex}
+
+\vspace{5cm}
+\RapportLieu, \RapportDate \\
+
+Signature:\\
+
+\RapportAuteur
+
+\newpage
+
+\input{chapitre/Annexes.tex}
+\end{document}

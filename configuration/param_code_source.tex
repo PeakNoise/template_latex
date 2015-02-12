@@ -1,0 +1,42 @@
+\usepackage{listings} % pour les codes sources
+\usepackage{verbatim}
+\usepackage{color}
+ 
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{BackColor}{rgb}{0.96,0.96,0.99} %Couleur de fond 
+\definecolor{RuleColor}{rgb}{0.9,0.9,0.98} %Couleur de fond 
+\definecolor{CmtColor}{rgb}{0.0,0.5,0.0} %Couleur des commentaires
+\definecolor{StringColor}{rgb}{0.8,0.0,0.0} %Couleur des chaine de texte
+\definecolor{IdentColor}{rgb}{0.0,0.0,0.0} %Couleur des identificateurs
+\definecolor{DefColor}{rgb}{0.0,0.0,0.0} %Couleur par defaut (symboles)
+\definecolor{WhiteColor}{rgb}{1.0,1.0,1.0} %Couleur par defaut (symboles)    
+
+\lstset{     
+    inputencoding=latin1,	 
+	 language=C,    % the language of the code
+	 basicstyle=\footnotesize \ttfamily,  % the size of the fonts that are used for the code. The type of font is "courrier"
+	 numbers=left,   % where to put the line-numbers
+	 numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+	 stepnumber=1,   % the step between two line-numbers. If it's 1, each line 
+	    % will be numbered
+	 numbersep=5pt,   % how far the line-numbers are from the code
+	 backgroundcolor=\color{BackColor},  % choose the background color. You must add \usepackage{color}
+	 showspaces=false,   % show spaces adding particular underscores
+	 showstringspaces=false,   % underline spaces within strings
+	 showtabs=false,   % show tabs within strings adding particular underscores
+	 frame=single,    % adds a frame around the code
+	 rulecolor=\color{black},   % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	 tabsize=2,    % sets default tabsize to 2 spaces
+	 captionpos=b,   % sets the caption-position to bottom
+	 breaklines=true,    % sets automatic line breaking
+	 breakatwhitespace=false,  % sets if automatic breaks should only happen at whitespace
+	 %title=\lstname,   % show the filename of files included with \lstinputlisting;
+	    % also try caption instead of title
+    commentstyle=\color{CmtColor},    %Style des commentaires
+    keywordstyle=\color{blue},                %Style des mot clef
+    identifierstyle=\color{IdentColor},%Style des identifiant
+    stringstyle=\color{StringColor},    %Style des chaines de texte
+	 escapeinside={\%*}{*)},  % if you want to add a comment within your code
+	 morekeywords={*,...}   % if you want to add more keywords to the set
+}
